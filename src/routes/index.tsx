@@ -71,7 +71,7 @@ import LazadaLogo from "@/assets/Lazada.jpg";
 import GuardianLogo from "@/assets/guardian.png";
 import UniqloLogo from "@/assets/UNIQLO logo.jpg";
 import WatsonsLogo from "@/assets/watsons.jpg";
-import ZaloraLogo from "@/assets/zalora.jpg";
+import ZaloraLogo from "@/assets/Zalora.jpg";
 
 const brands = [
   NikeLogo,
