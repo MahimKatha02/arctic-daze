@@ -782,7 +782,12 @@ function Footer() {
       <div className="container-luxe">
         <div className="grid md:grid-cols-12 gap-12 pb-14 border-b border-white/10">
           <div className="md:col-span-5">
-            <img src={logo} alt="Arctic Daze" className="h-10 w-auto brightness-0 invert" />
+            <div className="flex items-center gap-3">
+              <img src={logo} alt="Arctic Daze" className="size-12 rounded-full object-cover" />
+              <span className="text-xl tracking-tight text-white" style={{ fontFamily: "var(--font-display)" }}>
+                Arctic Daze<span className="text-accent">.</span>
+              </span>
+            </div>
             <p className="mt-6 text-white/60 max-w-sm leading-relaxed">
               Premium men's fashion imported from Malaysia. Sourced with intent, delivered with care.
             </p>
