@@ -27,24 +27,37 @@ import {
   FlaskConical,
 } from "lucide-react";
 
-import logoAsset from "@/assets/arctic-logo.jpg.asset.json";
-import heroAsset from "@/assets/arctic-cover.jpg.asset.json";
-import hoodieGreenAsset from "@/assets/product-hoodie-green.jpg.asset.json";
-import hoodieMaroonAsset from "@/assets/product-hoodie-maroon.jpg.asset.json";
-import watchesAsset from "@/assets/product-watches.jpg.asset.json";
-import pantsAsset from "@/assets/product-pants.jpg.asset.json";
-import jordanAsset from "@/assets/product-jordan.jpg.asset.json";
-import pumaAsset from "@/assets/product-puma.jpg.asset.json";
-import perfume from "@/assets/perfume.jpg";
+// import logoAsset from "@/assets/arctic-logo.jpg.asset.json";
+// import heroAsset from "@/assets/arctic-cover.jpg.asset.json";
+// import hoodieGreenAsset from "@/assets/product-hoodie-green.jpg.asset.json";
+// import hoodieMaroonAsset from "@/assets/product-hoodie-maroon.jpg.asset.json";
+// import watchesAsset from "@/assets/product-watches.jpg.asset.json";
+// import pantsAsset from "@/assets/product-pants.jpg.asset.json";
+// import jordanAsset from "@/assets/product-jordan.jpg.asset.json";
+// import pumaAsset from "@/assets/product-puma.jpg.asset.json";
+// import perfume from "@/assets/perfume.jpg";
 
-const logo = logoAsset.url;
-const hero = heroAsset.url;
-const collage1 = hoodieGreenAsset.url;
-const collage2 = hoodieMaroonAsset.url;
-const sneaker = jordanAsset.url;
-const watchImg = watchesAsset.url;
-const pants = pantsAsset.url;
-const puma = pumaAsset.url;
+// const logo = logoAsset.url;
+// const hero = heroAsset.url;
+// const collage1 = hoodieGreenAsset.url;
+// const collage2 = hoodieMaroonAsset.url;
+// const sneaker = jordanAsset.url;
+// const watchImg = watchesAsset.url;
+// const pants = pantsAsset.url;
+// const puma = pumaAsset.url;
+
+import logo from "@/assets/Arctic_Logo.jpg";
+import hero from "@/assets/Arctic_Cover.jpg";
+
+import collage1 from "@/assets/hoodie1.jpg";
+import collage2 from "@/assets/hoodie2.jpg";
+
+import sneaker from "@/assets/nike1.jpeg";
+import watchImg from "@/assets/watches.jpg";
+import pants from "@/assets/pants.jpg";
+import puma from "@/assets/glasses.jpg";
+
+import perfume from "@/assets/wallets.jpg";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -296,7 +309,7 @@ function Hero() {
                 alt=""
                 whileHover={{ scale: 1.08 }}
                 transition={{ duration: 0.6 }}
-                className="w-full h-36 object-cover"
+                className="w-full h-52 object-cover"
               />
             </motion.div>
           ))}
@@ -368,8 +381,8 @@ function About() {
           </p>
 
           <div className="mt-10 grid grid-cols-3 gap-8 max-w-md">
-            <Stat n="18+" label="Trusted Stores" />
-            <Stat n="12" label="Categories" />
+            <Stat n="500+" label="Repeat Customers" />
+            <Stat n="12+" label="Categories" />
             <Stat n="100%" label="Authentic" />
           </div>
         </motion.div>
@@ -783,7 +796,13 @@ function Footer() {
         <div className="grid md:grid-cols-12 gap-12 pb-14 border-b border-white/10">
           <div className="md:col-span-5">
             <div className="flex items-center gap-3">
-              <img src={logo} alt="Arctic Daze" className="size-12 rounded-full object-cover" />
+              {/* <img src={\Arctic_Logo.jpg} alt="Arctic Daze" className="size-12 rounded-full object-cover" /> */}
+
+              <img
+  src={logo}
+  alt="Arctic Daze"
+  className="size-12 rounded-full object-cover"
+/>
               <span className="text-xl tracking-tight text-white" style={{ fontFamily: "var(--font-display)" }}>
                 Arctic Daze<span className="text-accent">.</span>
               </span>
