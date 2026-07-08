@@ -52,19 +52,17 @@ import hero from "@/assets/Arctic_Cover.jpg";
 import collage1 from "@/assets/hoodie1.jpg";
 import collage2 from "@/assets/hoodie2.jpg";
 
-import sneaker from "@/assets/nike1.jpeg";
+import sneaker from "@/assets/nike1.jpeg"; 
 import watchImg from "@/assets/watches.jpg";
 import pants from "@/assets/pants.jpg";
 import puma from "@/assets/glasses.jpg";
 
 import perfume from "@/assets/wallets.jpg";
 
-
-
 import NikeLogo from "@/assets/Nike.jpg";
 import AdidasLogo from "@/assets/Adidas - Logo.jpg";
 import IkeaLogo from "@/assets/ikea.jpg";
-import HMLogo from "@/assets/H&M Logo and symbol, meaning, history.jpg";
+import HMLogo from "@/assets/h&m.jpg";  // FIXED: Removed extra text
 import CharlesKeithLogo from "@/assets/Cahrles&keith.jpg";
 import SephoraLogo from "@/assets/Sephora Wishlist.jpg";
 import SheinLogo from "@/assets/shein.jpg";
@@ -388,7 +386,8 @@ function About() {
       <div className="container-luxe grid lg:grid-cols-12 gap-14 items-center">
         <motion.div {...fadeUp} className="lg:col-span-5">
           <div className="relative">
-            < src={collage2} alt="Editorial fashion" className="rounded-2xl w-full h-[540px] object-cover shadow-[var(--shadow-lift)]" />
+            <img
+             src={collage2} alt="Editorial fashion" className="rounded-2xl w-full h-[540px] object-cover shadow-[var(--shadow-lift)]" />
             <div className="absolute -bottom-8 -right-4 md:-right-8 bg-background border border-border rounded-2xl p-6 shadow-[var(--shadow-soft)] w-56">
               <p className="eyebrow">Since 2024</p>
               <p className="mt-3 text-3xl font-display" style={{ fontFamily: "var(--font-display)" }}>Curated with intent</p>
@@ -701,19 +700,60 @@ function Stores() {
 }
 
 /* ---------------- BRANDS (already in marquee) — a curated grid strip */
+// function Brands() {
+//   return (
+//     <section className="py-16 border-t border-border">
+//       <div className="container-luxe text-center">
+//         <motion.p {...fadeUp} className="eyebrow">Featured Brands</motion.p>
+//         <motion.h3 {...fadeUp} className="mt-4 text-2xl md:text-3xl text-foreground/70 max-w-2xl mx-auto">
+//           A selection of the labels we source, chosen for craft, provenance and quiet confidence.
+//         </motion.h3>
+//       </div>
+//     </section>
+//   );
+// }
+
 function Brands() {
   return (
-    <section className="py-16 border-t border-border">
-      <div className="container-luxe text-center">
-        <motion.p {...fadeUp} className="eyebrow">Featured Brands</motion.p>
-        <motion.h3 {...fadeUp} className="mt-4 text-2xl md:text-3xl text-foreground/70 max-w-2xl mx-auto">
-          A selection of the labels we source, chosen for craft, provenance and quiet confidence.
-        </motion.h3>
+    <section
+      id="brands"
+      className="py-24 bg-background border-t border-border"
+    >
+      <div className="container-luxe">
+        <motion.p {...fadeUp} className="eyebrow text-center">
+          Trusted Brands
+        </motion.p>
+
+        <motion.h2
+          {...fadeUp}
+          className="mt-4 text-center text-4xl md:text-5xl"
+        >
+          Brands We Source From
+        </motion.h2>
+
+        <div className="mt-16 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-8">
+          {brands.map((brand, i) => (
+            <motion.div
+              key={i}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: i * 0.05 }}
+              whileHover={{ scale: 1.05 }}
+              className="bg-surface rounded-2xl border border-border p-8 flex items-center justify-center"
+            >
+              <img
+                src={brand}
+                alt="Brand Logo"
+                className="max-h-16 object-contain grayscale hover:grayscale-0 transition"
+              />
+            </motion.div>
+          ))}
+        </div>
       </div>
     </section>
   );
 }
-
 /* ---------------- COMMUNITY ---------------- */
 function Community() {
   return (
