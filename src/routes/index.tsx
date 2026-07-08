@@ -296,7 +296,7 @@ function Hero() {
                 alt=""
                 whileHover={{ scale: 1.08 }}
                 transition={{ duration: 0.6 }}
-                className="w-full h-44 object-cover"
+                className="w-full h-36 object-cover"
               />
             </motion.div>
           ))}
