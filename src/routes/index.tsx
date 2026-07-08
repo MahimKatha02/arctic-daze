@@ -281,7 +281,7 @@ function Hero() {
           transition={{ delay: 1.2, duration: 1 }}
           className="hidden xl:grid absolute right-12 top-1/2 -translate-y-1/2 grid-cols-2 gap-4 w-[380px]"
         >
-          {[collage1, sneaker, watchImg, pants, puma, perfume].slice(0, 4).map((src, i) => (
+          {[collage1, sneaker, watchImg, pants, puma, perfume].map((src, i) => (
             <motion.div
               key={i}
               initial={{ y: 30, opacity: 0 }}
