@@ -46,6 +46,38 @@ import {
 // const pants = pantsAsset.url;
 // const puma = pumaAsset.url;
 
+// import logo from "@/assets/Arctic_Logo.jpg";
+// import hero from "@/assets/Arctic_Cover.jpg";
+
+// import collage1 from "@/assets/hoodie1.jpg";
+// import collage2 from "@/assets/hoodie2.jpg";
+
+// import sneaker from "@/assets/nike1.jpeg"; 
+// import watchImg from "@/assets/watches.jpg";
+// import pants from "@/assets/pants.jpg";
+// import puma from "@/assets/glasses.jpg";
+
+// import perfume from "@/assets/wallets.jpg";
+
+// import NikeLogo from "@/assets/Nike.jpg";
+// import AdidasLogo from "@/assets/Adidas - Logo.jpg";
+// import IkeaLogo from "@/assets/ikea.jpg";
+// import HMLogo from "@/assets/h&m.jpg";  // FIXED: Removed extra text
+// import CharlesKeithLogo from "@/assets/Cahrles&keith.jpg";
+// import SephoraLogo from "@/assets/Sephora Wishlist.jpg";
+// import SheinLogo from "@/assets/shein.jpg";
+// import ShopeeLogo from "@/assets/Shopee.jpg";
+// import LazadaLogo from "@/assets/Lazada.jpg";
+// import GuardianLogo from "@/assets/guardian.png";
+// import UniqloLogo from "@/assets/UNIQLO logo.jpg";
+// import WatsonsLogo from "@/assets/watsons.jpg";
+// import ZaloraLogo from "@/assets/Zalora.jpg";
+
+
+
+
+
+
 import logo from "@/assets/Arctic_Logo.jpg";
 import hero from "@/assets/Arctic_Cover.jpg";
 
@@ -59,10 +91,23 @@ import puma from "@/assets/glasses.jpg";
 
 import perfume from "@/assets/wallets.jpg";
 
+// Category specific images
+import shoesImg from "@/assets/shoes.jpg";
+import capImg from "@/assets/cap.jpg";
+import tshirtImg from "@/assets/teeshirt.jpg";
+import shirtImg from "@/assets/shirt1.jpg";
+import shirt2Img from "@/assets/shirt2.jpg";
+import bagsImg from "@/assets/bags.jpg";
+import perfumeImg from "@/assets/sauvage_dior.jpg";
+import hoodieImg from "@/assets/hoodie.jpg";
+
+// Brand Logos
 import NikeLogo from "@/assets/Nike.jpg";
 import AdidasLogo from "@/assets/Adidas - Logo.jpg";
+import PumaLogo from "@/assets/puma.jpg";
+import UnderArmourLogo from "@/assets/underarmour.jpg";
 import IkeaLogo from "@/assets/ikea.jpg";
-import HMLogo from "@/assets/h&m.jpg";  // FIXED: Removed extra text
+import HMLogo from "@/assets/h&m.jpg";
 import CharlesKeithLogo from "@/assets/Cahrles&keith.jpg";
 import SephoraLogo from "@/assets/Sephora Wishlist.jpg";
 import SheinLogo from "@/assets/shein.jpg";
@@ -72,10 +117,36 @@ import GuardianLogo from "@/assets/guardian.png";
 import UniqloLogo from "@/assets/UNIQLO logo.jpg";
 import WatsonsLogo from "@/assets/watsons.jpg";
 import ZaloraLogo from "@/assets/Zalora.jpg";
+import FossilLogo from "@/assets/fossil.jpg";
+import CasioLogo from "@/assets/casio.jpg";
+import SeikoLogo from "@/assets/seiko.jpg";
+
+
+
+
+// const brands = [
+//   NikeLogo,
+//   AdidasLogo,
+//   IkeaLogo,
+//   HMLogo,
+//   CharlesKeithLogo,
+//   SephoraLogo,
+//   SheinLogo,
+//   ShopeeLogo,
+//   LazadaLogo,
+//   GuardianLogo,
+//   UniqloLogo,
+//   WatsonsLogo,
+//   ZaloraLogo,
+// ];
+
+
 
 const brands = [
   NikeLogo,
   AdidasLogo,
+  PumaLogo,
+  UnderArmourLogo,
   IkeaLogo,
   HMLogo,
   CharlesKeithLogo,
@@ -87,7 +158,12 @@ const brands = [
   UniqloLogo,
   WatsonsLogo,
   ZaloraLogo,
+  FossilLogo,
+  CasioLogo,
+  SeikoLogo,
 ];
+
+
 
 
 export const Route = createFileRoute("/")({
@@ -428,70 +504,163 @@ function Stat({ n, label }: { n: string; label: string }) {
 }
 
 /* ---------------- COLLECTIONS ---------------- */
+// const CATEGORIES = [
+//   { icon: Footprints, name: "Sneakers", tag: "Everyday icons" },
+//   { icon: Footprints, name: "Shoes", tag: "Refined footwear" },
+//   { icon: Watch, name: "Watches", tag: "Timeless pieces" },
+//   { icon: Glasses, name: "Sunglasses", tag: "Sculpted shades" },
+//   { icon: Wallet, name: "Wallets", tag: "Leather craft" },
+//   { icon: Shirt, name: "T-Shirts", tag: "Cotton essentials" },
+//   { icon: Shirt, name: "Shirts", tag: "Tailored fits" },
+//   { icon: Shirt, name: "Hoodies", tag: "Elevated comfort" },
+//   { icon: Shirt, name: "Pants", tag: "Modern cuts" },
+//   { icon: Shirt, name: "Caps", tag: "Finishing touch" },
+//   { icon: Backpack, name: "Bags", tag: "Carry with intent" },
+//   { icon: FlaskConical, name: "Perfumes", tag: "Signature scent" },
+// ];
+
+
 const CATEGORIES = [
-  { icon: Footprints, name: "Sneakers", tag: "Everyday icons" },
-  { icon: Footprints, name: "Shoes", tag: "Refined footwear" },
-  { icon: Watch, name: "Watches", tag: "Timeless pieces" },
-  { icon: Glasses, name: "Sunglasses", tag: "Sculpted shades" },
-  { icon: Wallet, name: "Wallets", tag: "Leather craft" },
-  { icon: Shirt, name: "T-Shirts", tag: "Cotton essentials" },
-  { icon: Shirt, name: "Shirts", tag: "Tailored fits" },
-  { icon: Shirt, name: "Hoodies", tag: "Elevated comfort" },
-  { icon: Shirt, name: "Pants", tag: "Modern cuts" },
-  { icon: Shirt, name: "Caps", tag: "Finishing touch" },
-  { icon: Backpack, name: "Bags", tag: "Carry with intent" },
-  { icon: FlaskConical, name: "Perfumes", tag: "Signature scent" },
+  { 
+    icon: Footprints, 
+    name: "Sneakers", 
+    tag: "Everyday icons",
+    image: sneaker, // Using existing sneaker import (nike1.jpeg)
+    bgColor: "from-blue-900/40 to-purple-900/40"
+  },
+  { 
+    icon: Footprints, 
+    name: "Shoes", 
+    tag: "Refined footwear",
+    image: shoesImg, // Using shoes.jpg
+    bgColor: "from-indigo-900/40 to-slate-900/40"
+  },
+  { 
+    icon: Watch, 
+    name: "Watches", 
+    tag: "Timeless pieces",
+    image: watchImg, // Using existing watchImg import (watches.jpg)
+    bgColor: "from-amber-900/40 to-gray-900/40"
+  },
+  { 
+    icon: Glasses, 
+    name: "Sunglasses", 
+    tag: "Sculpted shades",
+    image: puma, // Using existing puma import (glasses.jpg)
+    bgColor: "from-sky-900/40 to-gray-900/40"
+  },
+  { 
+    icon: Wallet, 
+    name: "Wallets", 
+    tag: "Leather craft",
+    image: perfume, // Using existing perfume import (wallets.jpg)
+    bgColor: "from-amber-800/40 to-stone-900/40"
+  },
+  { 
+    icon: Shirt, 
+    name: "T-Shirts", 
+    tag: "Cotton essentials",
+    image: tshirtImg, // Using teeshirt.jpg
+    bgColor: "from-emerald-900/40 to-teal-900/40"
+  },
+  { 
+    icon: Shirt, 
+    name: "Shirts", 
+    tag: "Tailored fits",
+    image: shirtImg, // Using shirt1.jpg
+    bgColor: "from-blue-800/40 to-gray-900/40"
+  },
+  { 
+    icon: Shirt, 
+    name: "Hoodies", 
+    tag: "Elevated comfort",
+    image: hoodieImg, // Using hoodie.jpg
+    bgColor: "from-rose-900/40 to-stone-900/40"
+  },
+  { 
+    icon: Shirt, 
+    name: "Pants", 
+    tag: "Modern cuts",
+    image: pants, // Using existing pants import (pants.jpg)
+    bgColor: "from-gray-800/40 to-black/40"
+  },
+  { 
+    icon: Shirt, 
+    name: "Caps", 
+    tag: "Finishing touch",
+    image: capImg, // Using cap.jpg
+    bgColor: "from-indigo-800/40 to-gray-900/40"
+  },
+  { 
+    icon: Backpack, 
+    name: "Bags", 
+    tag: "Carry with intent",
+    image: bagsImg, // Using bags.jpg
+    bgColor: "from-amber-900/40 to-stone-900/40"
+  },
+  { 
+    icon: FlaskConical, 
+    name: "Perfumes", 
+    tag: "Signature scent",
+    image: perfumeImg, // Using perfume.jpg
+    bgColor: "from-pink-900/40 to-purple-900/40"
+  },
 ];
 
-function Collections() {
-  return (
-    <section id="collections" className="py-28 md:py-40 bg-surface">
-      <div className="container-luxe">
-        <div className="flex items-end justify-between flex-wrap gap-6 mb-16">
-          <div>
-            <motion.p {...fadeUp} className="eyebrow">Featured Collections</motion.p>
-            <motion.h2 {...fadeUp} className="mt-4 text-4xl md:text-5xl lg:text-6xl max-w-2xl leading-[1.05]">
-              Every piece, <em className="italic font-light">considered.</em>
-            </motion.h2>
-          </div>
-          <motion.a {...fadeUp} href="#stores" className="text-sm tracking-wide inline-flex items-center gap-2 text-accent hover:text-accent-hover" style={{ fontFamily: "var(--font-ui)" }}>
-            Explore all stores <ArrowRight className="size-4" />
-          </motion.a>
-        </div>
 
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6">
-          {CATEGORIES.map((c, i) => (
-            <motion.a
-              key={c.name}
-              href="#stores"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-60px" }}
-              transition={{ duration: 0.6, delay: (i % 4) * 0.08, ease: [0.22, 1, 0.36, 1] }}
-              whileHover={{ y: -8 }}
-              className="group relative bg-background border border-border rounded-2xl p-6 md:p-8 aspect-[3/4] flex flex-col justify-between overflow-hidden transition-shadow hover:shadow-[var(--shadow-lift)]"
-            >
-              <div className="absolute inset-0 bg-gradient-to-br from-transparent via-transparent to-accent/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-              <div className="relative">
-                <c.icon strokeWidth={1.2} className="size-8 text-deep" />
-              </div>
-              <div className="relative">
-                <p className="text-xs tracking-[0.2em] uppercase text-foreground/45" style={{ fontFamily: "var(--font-ui)" }}>
-                  0{Math.min(i + 1, 12)} — Category
-                </p>
-                <h3 className="mt-2 text-2xl md:text-[1.7rem] leading-tight">{c.name}</h3>
-                <p className="mt-1 text-sm text-foreground/60">{c.tag}</p>
-                <div className="mt-4 flex items-center gap-1 text-accent text-xs tracking-widest opacity-0 group-hover:opacity-100 -translate-x-2 group-hover:translate-x-0 transition-all duration-500">
-                  BROWSE <ArrowUpRight className="size-3.5" />
-                </div>
-              </div>
-            </motion.a>
-          ))}
-        </div>
-      </div>
-    </section>
-  );
-}
+
+// function Collections() {
+//   return (
+//     <section id="collections" className="py-28 md:py-40 bg-surface">
+//       <div className="container-luxe">
+//         <div className="flex items-end justify-between flex-wrap gap-6 mb-16">
+//           <div>
+//             <motion.p {...fadeUp} className="eyebrow">Featured Collections</motion.p>
+//             <motion.h2 {...fadeUp} className="mt-4 text-4xl md:text-5xl lg:text-6xl max-w-2xl leading-[1.05]">
+//               Every piece, <em className="italic font-light">considered.</em>
+//             </motion.h2>
+//           </div>
+//           <motion.a {...fadeUp} href="#stores" className="text-sm tracking-wide inline-flex items-center gap-2 text-accent hover:text-accent-hover" style={{ fontFamily: "var(--font-ui)" }}>
+//             Explore all stores <ArrowRight className="size-4" />
+//           </motion.a>
+//         </div>
+
+//         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6">
+//           {CATEGORIES.map((c, i) => (
+//             <motion.a
+//               key={c.name}
+//               href="#stores"
+//               initial={{ opacity: 0, y: 30 }}
+//               whileInView={{ opacity: 1, y: 0 }}
+//               viewport={{ once: true, margin: "-60px" }}
+//               transition={{ duration: 0.6, delay: (i % 4) * 0.08, ease: [0.22, 1, 0.36, 1] }}
+//               whileHover={{ y: -8 }}
+//               className="group relative bg-background border border-border rounded-2xl p-6 md:p-8 aspect-[3/4] flex flex-col justify-between overflow-hidden transition-shadow hover:shadow-[var(--shadow-lift)]"
+//             >
+//               <div className="absolute inset-0 bg-gradient-to-br from-transparent via-transparent to-accent/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+//               <div className="relative">
+//                 <c.icon strokeWidth={1.2} className="size-8 text-deep" />
+//               </div>
+//               <div className="relative">
+//                 <p className="text-xs tracking-[0.2em] uppercase text-foreground/45" style={{ fontFamily: "var(--font-ui)" }}>
+//                   0{Math.min(i + 1, 12)} — Category
+//                 </p>
+//                 <h3 className="mt-2 text-2xl md:text-[1.7rem] leading-tight">{c.name}</h3>
+//                 <p className="mt-1 text-sm text-foreground/60">{c.tag}</p>
+//                 <div className="mt-4 flex items-center gap-1 text-accent text-xs tracking-widest opacity-0 group-hover:opacity-100 -translate-x-2 group-hover:translate-x-0 transition-all duration-500">
+//                   BROWSE <ArrowUpRight className="size-3.5" />
+//                 </div>
+//               </div>
+//             </motion.a>
+//           ))}
+//         </div>
+//       </div>
+//     </section>
+//   );
+// }
+
+
+
 
 /* ---------------- WHY US ---------------- */
 const WHY = [
@@ -504,6 +673,7 @@ const WHY = [
   { icon: Facebook, title: "Easy Facebook Ordering", body: "Send a product link — we handle the rest." },
   { icon: Truck, title: "Affordable Import Service", body: "Fair, honest pricing on international sourcing." },
 ];
+
 
 function WhyUs() {
   return (
@@ -536,6 +706,75 @@ function WhyUs() {
     </section>
   );
 }
+
+
+
+function Collections() {
+  return (
+    <section id="collections" className="py-28 md:py-40 bg-surface">
+      <div className="container-luxe">
+        <div className="flex items-end justify-between flex-wrap gap-6 mb-16">
+          <div>
+            <motion.p {...fadeUp} className="eyebrow">Featured Collections</motion.p>
+            <motion.h2 {...fadeUp} className="mt-4 text-4xl md:text-5xl lg:text-6xl max-w-2xl leading-[1.05]">
+              Every piece, <em className="italic font-light">considered.</em>
+            </motion.h2>
+          </div>
+          <motion.a {...fadeUp} href="#stores" className="text-sm tracking-wide inline-flex items-center gap-2 text-accent hover:text-accent-hover" style={{ fontFamily: "var(--font-ui)" }}>
+            Explore all stores <ArrowRight className="size-4" />
+          </motion.a>
+        </div>
+
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6">
+          {CATEGORIES.map((c, i) => (
+            <motion.a
+              key={c.name}
+              href="#stores"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-60px" }}
+              transition={{ duration: 0.6, delay: (i % 4) * 0.08, ease: [0.22, 1, 0.36, 1] }}
+              whileHover={{ y: -8 }}
+              className="group relative bg-background border border-border rounded-2xl p-6 md:p-8 aspect-[3/4] flex flex-col justify-between overflow-hidden transition-shadow hover:shadow-[var(--shadow-lift)]"
+            >
+              {/* Background Image with very light blur */}
+              <div className="absolute inset-0">
+                <img
+                  src={c.image}
+                  alt={c.name}
+                  className="w-full h-full object-cover"
+                />
+                {/* Very light blur - just enough to soften */}
+                <div className={`absolute inset-0 bg-gradient-to-br ${c.bgColor} backdrop-blur-[2px]`} />
+                <div className="absolute inset-0 bg-black/30" />
+              </div>
+              
+              <div className="relative z-10 flex flex-col justify-between h-full">
+                <div>
+                  <c.icon strokeWidth={1.2} className="size-8 text-white/90" />
+                </div>
+                
+                <div>
+                  <p className="text-xs tracking-[0.2em] uppercase text-white/70" style={{ fontFamily: "var(--font-ui)" }}>
+                    0{String(i + 1).padStart(2, '0')} — Category
+                  </p>
+                  <h3 className="mt-2 text-2xl md:text-[1.7rem] leading-tight text-white font-medium">{c.name}</h3>
+                  <p className="mt-1 text-sm text-white/80">{c.tag}</p>
+                  <div className="mt-4 flex items-center gap-1 text-white/90 text-xs tracking-widest transition-all duration-500">
+                    BROWSE <ArrowUpRight className="size-3.5" />
+                  </div>
+                </div>
+              </div>
+            </motion.a>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+
+
 
 /* ---------------- HOW TO ORDER ---------------- */
 const STEPS = [
@@ -591,51 +830,269 @@ function HowToOrder() {
 }
 
 /* ---------------- STORES ---------------- */
-const STORE_GROUPS: { title: string; items: { name: string; url: string; desc: string }[] }[] = [
+// const STORE_GROUPS: { title: string; items: { name: string; url: string; desc: string }[] }[] = [
+//   {
+//     title: "Fashion",
+//     items: [
+//       { name: "SHEIN Malaysia", url: "https://my.shein.com", desc: "Everyday fashion at accessible prices." },
+//       { name: "Zalora Malaysia", url: "https://www.zalora.com.my", desc: "Southeast Asia's leading fashion destination." },
+//       { name: "H&M Malaysia", url: "https://www2.hm.com/en_my", desc: "Contemporary essentials and seasonal drops." },
+//       { name: "UNIQLO Malaysia", url: "https://www.uniqlo.com/my", desc: "Japanese made LifeWear basics." },
+//     ],
+//   },
+//   {
+//     title: "Sports",
+//     items: [
+//       { name: "Adidas Malaysia", url: "https://www.adidas.com.my", desc: "Iconic sneakers and performance apparel." },
+//       { name: "Nike Malaysia", url: "https://www.nike.com/my", desc: "Legendary silhouettes and running gear." },
+//       { name: "Puma Malaysia", url: "https://my.puma.com", desc: "Sport-lifestyle footwear and apparel." },
+//       { name: "Under Armour Malaysia", url: "https://www.underarmour.com.my", desc: "Engineered performance essentials." },
+//     ],
+//   },
+//   {
+//     title: "Marketplaces",
+//     items: [
+//       { name: "Shopee Malaysia", url: "https://shopee.com.my", desc: "One of Malaysia's largest marketplaces." },
+//       { name: "Lazada Malaysia", url: "https://www.lazada.com.my", desc: "Trusted marketplace with countless brands." },
+//     ],
+//   },
+//   {
+//     title: "Accessories",
+//     items: [
+//       { name: "Fossil Malaysia", url: "https://www.fossil.com/en-my", desc: "Watches, leather goods and accessories." },
+//       { name: "Casio Malaysia", url: "https://casio.com/my", desc: "Iconic timepieces including G-Shock." },
+//       { name: "Seiko Malaysia", url: "https://www.seikoboutique.com.my", desc: "Precision Japanese watchmaking." },
+//       { name: "Charles & Keith Malaysia", url: "https://www.charleskeith.com/my", desc: "Modern accessories and small leather goods." },
+//     ],
+//   },
+//   {
+//     title: "Grooming & Perfumes",
+//     items: [
+//       { name: "Sephora Malaysia", url: "https://www.sephora.my", desc: "Premium fragrances and grooming." },
+//       { name: "IKEA", url: "https://www.ikea.com/my/en/", desc: "Modern furniture, home décor and smart living solutions." },
+//       { name: "Guardian Malaysia", url: "https://www.guardian.com.my", desc: "Everyday personal care and grooming." },
+//       { name: "Watsons Malaysia", url: "https://www.watsons.com.my", desc: "Trusted health, beauty and grooming." },
+//     ],
+//   },
+// ];
+
+
+
+const STORE_GROUPS: { 
+  title: string; 
+  items: { 
+    name: string; 
+    url: string; 
+    desc: string; 
+    logo: string;
+  }[] 
+}[] = [
   {
     title: "Fashion",
     items: [
-      { name: "SHEIN Malaysia", url: "https://my.shein.com", desc: "Everyday fashion at accessible prices." },
-      { name: "Zalora Malaysia", url: "https://www.zalora.com.my", desc: "Southeast Asia's leading fashion destination." },
-      { name: "H&M Malaysia", url: "https://www2.hm.com/en_my", desc: "Contemporary essentials and seasonal drops." },
-      { name: "UNIQLO Malaysia", url: "https://www.uniqlo.com/my", desc: "Japanese made LifeWear basics." },
+      { 
+        name: "SHEIN Malaysia", 
+        url: "https://my.shein.com", 
+        desc: "Everyday fashion at accessible prices.",
+        logo: SheinLogo 
+      },
+      { 
+        name: "Zalora Malaysia", 
+        url: "https://www.zalora.com.my", 
+        desc: "Southeast Asia's leading fashion destination.",
+        logo: ZaloraLogo 
+      },
+      { 
+        name: "H&M Malaysia", 
+        url: "https://www2.hm.com/en_my", 
+        desc: "Contemporary essentials and seasonal drops.",
+        logo: HMLogo 
+      },
+      { 
+        name: "UNIQLO Malaysia", 
+        url: "https://www.uniqlo.com/my", 
+        desc: "Japanese made LifeWear basics.",
+        logo: UniqloLogo 
+      },
     ],
   },
   {
     title: "Sports",
     items: [
-      { name: "Adidas Malaysia", url: "https://www.adidas.com.my", desc: "Iconic sneakers and performance apparel." },
-      { name: "Nike Malaysia", url: "https://www.nike.com/my", desc: "Legendary silhouettes and running gear." },
-      { name: "Puma Malaysia", url: "https://my.puma.com", desc: "Sport-lifestyle footwear and apparel." },
-      { name: "Under Armour Malaysia", url: "https://www.underarmour.com.my", desc: "Engineered performance essentials." },
+      { 
+        name: "Adidas Malaysia", 
+        url: "https://www.adidas.com.my", 
+        desc: "Iconic sneakers and performance apparel.",
+        logo: AdidasLogo 
+      },
+      { 
+        name: "Nike Malaysia", 
+        url: "https://www.nike.com/my", 
+        desc: "Legendary silhouettes and running gear.",
+        logo: NikeLogo 
+      },
+      { 
+        name: "Puma Malaysia", 
+        url: "https://my.puma.com", 
+        desc: "Sport-lifestyle footwear and apparel.",
+        logo: PumaLogo 
+      },
+      { 
+        name: "Under Armour Malaysia", 
+        url: "https://www.underarmour.com.my", 
+        desc: "Engineered performance essentials.",
+        logo: UnderArmourLogo 
+      },
     ],
   },
   {
     title: "Marketplaces",
     items: [
-      { name: "Shopee Malaysia", url: "https://shopee.com.my", desc: "One of Malaysia's largest marketplaces." },
-      { name: "Lazada Malaysia", url: "https://www.lazada.com.my", desc: "Trusted marketplace with countless brands." },
+      { 
+        name: "Shopee Malaysia", 
+        url: "https://shopee.com.my", 
+        desc: "One of Malaysia's largest marketplaces.",
+        logo: ShopeeLogo 
+      },
+      { 
+        name: "Lazada Malaysia", 
+        url: "https://www.lazada.com.my", 
+        desc: "Trusted marketplace with countless brands.",
+        logo: LazadaLogo 
+      },
     ],
   },
   {
     title: "Accessories",
     items: [
-      { name: "Fossil Malaysia", url: "https://www.fossil.com/en-my", desc: "Watches, leather goods and accessories." },
-      { name: "Casio Malaysia", url: "https://casio.com/my", desc: "Iconic timepieces including G-Shock." },
-      { name: "Seiko Malaysia", url: "https://www.seikoboutique.com.my", desc: "Precision Japanese watchmaking." },
-      { name: "Charles & Keith Malaysia", url: "https://www.charleskeith.com/my", desc: "Modern accessories and small leather goods." },
+      { 
+        name: "Fossil Malaysia", 
+        url: "https://www.fossil.com/en-my", 
+        desc: "Watches, leather goods and accessories.",
+        logo: FossilLogo 
+      },
+      { 
+        name: "Casio Malaysia", 
+        url: "https://casio.com/my", 
+        desc: "Iconic timepieces including G-Shock.",
+        logo: CasioLogo 
+      },
+      { 
+        name: "Seiko Malaysia", 
+        url: "https://www.seikoboutique.com.my", 
+        desc: "Precision Japanese watchmaking.",
+        logo: SeikoLogo 
+      },
+      { 
+        name: "Charles & Keith Malaysia", 
+        url: "https://www.charleskeith.com/my", 
+        desc: "Modern accessories and small leather goods.",
+        logo: CharlesKeithLogo 
+      },
     ],
   },
   {
     title: "Grooming & Perfumes",
     items: [
-      { name: "Sephora Malaysia", url: "https://www.sephora.my", desc: "Premium fragrances and grooming." },
-      { name: "IKEA", url: "https://www.ikea.com/my/en/", desc: "Modern furniture, home décor and smart living solutions." },
-      { name: "Guardian Malaysia", url: "https://www.guardian.com.my", desc: "Everyday personal care and grooming." },
-      { name: "Watsons Malaysia", url: "https://www.watsons.com.my", desc: "Trusted health, beauty and grooming." },
+      { 
+        name: "Sephora Malaysia", 
+        url: "https://www.sephora.my", 
+        desc: "Premium fragrances and grooming.",
+        logo: SephoraLogo 
+      },
+      { 
+        name: "IKEA", 
+        url: "https://www.ikea.com/my/en/", 
+        desc: "Modern furniture, home décor and smart living solutions.",
+        logo: IkeaLogo 
+      },
+      { 
+        name: "Guardian Malaysia", 
+        url: "https://www.guardian.com.my", 
+        desc: "Everyday personal care and grooming.",
+        logo: GuardianLogo 
+      },
+      { 
+        name: "Watsons Malaysia", 
+        url: "https://www.watsons.com.my", 
+        desc: "Trusted health, beauty and grooming.",
+        logo: WatsonsLogo 
+      },
     ],
   },
 ];
+
+
+
+
+// function Stores() {
+//   return (
+//     <section id="stores" className="py-28 md:py-40">
+//       <div className="container-luxe">
+//         <div className="max-w-2xl mb-16">
+//           <motion.p {...fadeUp} className="eyebrow">Malaysian Shopping Websites</motion.p>
+//           <motion.h2 {...fadeUp} className="mt-4 text-4xl md:text-5xl lg:text-6xl leading-[1.05]">
+//             Browse the stores. <em className="italic font-light">We import.</em>
+//           </motion.h2>
+//           <motion.p {...fadeUp} className="mt-6 text-foreground/60 leading-relaxed max-w-lg">
+//             Explore our curated list of trusted Malaysian retailers, copy the product link,
+//             and send it our way to place your order.
+//           </motion.p>
+//         </div>
+
+//         <div className="space-y-20">
+//           {STORE_GROUPS.map((g) => (
+//             <div key={g.title}>
+//               <motion.div {...fadeUp} className="flex items-baseline gap-6 mb-8">
+//                 <h3 className="text-2xl md:text-3xl font-display" style={{ fontFamily: "var(--font-display)" }}>{g.title}</h3>
+//                 <div className="flex-1 h-px bg-border" />
+//                 <span className="text-xs tracking-[0.2em] uppercase text-foreground/40">{g.items.length} stores</span>
+//               </motion.div>
+
+//               <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
+//                 {g.items.map((s, i) => (
+//                   <motion.a
+//                     key={s.name}
+//                     href={s.url}
+//                     target="_blank"
+//                     rel="noreferrer noopener"
+//                     initial={{ opacity: 0, y: 20 }}
+//                     whileInView={{ opacity: 1, y: 0 }}
+//                     viewport={{ once: true }}
+//                     transition={{ duration: 0.5, delay: (i % 4) * 0.06 }}
+//                     whileHover={{ y: -6 }}
+//                     className="group bg-surface border border-border rounded-2xl p-7 flex flex-col gap-6 min-h-[220px] transition-colors hover:bg-background hover:shadow-[var(--shadow-lift)]"
+//                   >
+
+//                     <div className="flex items-start justify-between">
+//                       <div className="size-12 rounded-full bg-background border border-border flex items-center justify-center">
+//                         <Package strokeWidth={1.2} className="size-5 text-deep" />
+//                       </div>
+//                       <ArrowUpRight strokeWidth={1.4} className="size-5 text-foreground/40 group-hover:text-accent group-hover:rotate-45 transition-all duration-500" />
+//                     </div>
+
+
+//                     <div className="mt-auto">
+//                       <p className="text-lg leading-tight" style={{ fontFamily: "var(--font-display)" }}>{s.name}</p>
+//                       <p className="mt-2 text-sm text-foreground/55 line-clamp-2">{s.desc}</p>
+//                       <p className="mt-4 inline-flex items-center gap-1.5 text-xs tracking-[0.18em] uppercase text-accent" style={{ fontFamily: "var(--font-ui)" }}>
+//                         Visit Website <ArrowRight className="size-3" />
+//                       </p>
+//                     </div>
+//                   </motion.a>
+//                 ))}
+//               </div>
+//             </div>
+//           ))}
+//         </div>
+//       </div>
+//     </section>
+//   );
+// }
+
+
+
+
 
 function Stores() {
   return (
@@ -676,8 +1133,12 @@ function Stores() {
                     className="group bg-surface border border-border rounded-2xl p-7 flex flex-col gap-6 min-h-[220px] transition-colors hover:bg-background hover:shadow-[var(--shadow-lift)]"
                   >
                     <div className="flex items-start justify-between">
-                      <div className="size-12 rounded-full bg-background border border-border flex items-center justify-center">
-                        <Package strokeWidth={1.2} className="size-5 text-deep" />
+                      <div className="size-14 rounded-xl bg-background border border-border flex items-center justify-center overflow-hidden p-2">
+                        <img 
+                          src={s.logo} 
+                          alt={s.name} 
+                          className="w-full h-full object-contain grayscale group-hover:grayscale-0 transition-all duration-300"
+                        />
                       </div>
                       <ArrowUpRight strokeWidth={1.4} className="size-5 text-foreground/40 group-hover:text-accent group-hover:rotate-45 transition-all duration-500" />
                     </div>
@@ -698,6 +1159,11 @@ function Stores() {
     </section>
   );
 }
+
+
+
+
+
 
 /* ---------------- BRANDS (already in marquee) — a curated grid strip */
 // function Brands() {
