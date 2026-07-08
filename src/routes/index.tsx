@@ -27,13 +27,24 @@ import {
   FlaskConical,
 } from "lucide-react";
 
-import logo from "@/assets/logo.png";
-import hero from "@/assets/hero.jpg";
-import collage1 from "@/assets/collage1.jpg";
-import collage2 from "@/assets/collage2.jpg";
-import sneaker from "@/assets/sneaker.jpg";
-import watchImg from "@/assets/watch.jpg";
+import logoAsset from "@/assets/arctic-logo.jpg.asset.json";
+import heroAsset from "@/assets/arctic-cover.jpg.asset.json";
+import hoodieGreenAsset from "@/assets/product-hoodie-green.jpg.asset.json";
+import hoodieMaroonAsset from "@/assets/product-hoodie-maroon.jpg.asset.json";
+import watchesAsset from "@/assets/product-watches.jpg.asset.json";
+import pantsAsset from "@/assets/product-pants.jpg.asset.json";
+import jordanAsset from "@/assets/product-jordan.jpg.asset.json";
+import pumaAsset from "@/assets/product-puma.jpg.asset.json";
 import perfume from "@/assets/perfume.jpg";
+
+const logo = logoAsset.url;
+const hero = heroAsset.url;
+const collage1 = hoodieGreenAsset.url;
+const collage2 = hoodieMaroonAsset.url;
+const sneaker = jordanAsset.url;
+const watchImg = watchesAsset.url;
+const pants = pantsAsset.url;
+const puma = pumaAsset.url;
 
 export const Route = createFileRoute("/")({
   head: () => ({
