@@ -27,13 +27,24 @@ import {
   FlaskConical,
 } from "lucide-react";
 
-import logo from "@/assets/logo.png";
-import hero from "@/assets/hero.jpg";
-import collage1 from "@/assets/collage1.jpg";
-import collage2 from "@/assets/collage2.jpg";
-import sneaker from "@/assets/sneaker.jpg";
-import watchImg from "@/assets/watch.jpg";
+import logoAsset from "@/assets/arctic-logo.jpg.asset.json";
+import heroAsset from "@/assets/arctic-cover.jpg.asset.json";
+import hoodieGreenAsset from "@/assets/product-hoodie-green.jpg.asset.json";
+import hoodieMaroonAsset from "@/assets/product-hoodie-maroon.jpg.asset.json";
+import watchesAsset from "@/assets/product-watches.jpg.asset.json";
+import pantsAsset from "@/assets/product-pants.jpg.asset.json";
+import jordanAsset from "@/assets/product-jordan.jpg.asset.json";
+import pumaAsset from "@/assets/product-puma.jpg.asset.json";
 import perfume from "@/assets/perfume.jpg";
+
+const logo = logoAsset.url;
+const hero = heroAsset.url;
+const collage1 = hoodieGreenAsset.url;
+const collage2 = hoodieMaroonAsset.url;
+const sneaker = jordanAsset.url;
+const watchImg = watchesAsset.url;
+const pants = pantsAsset.url;
+const puma = pumaAsset.url;
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -111,12 +122,20 @@ function Nav() {
       }`}
     >
       <div className="container-luxe flex items-center justify-between h-20">
-        <a href="#home" className="flex items-center gap-2">
+        <a href="#home" className="flex items-center gap-3">
           <img
             src={logo}
             alt="Arctic Daze"
-            className={`h-9 md:h-10 w-auto transition ${scrolled || open ? "" : "brightness-0 invert"}`}
+            className="size-11 md:size-12 rounded-full object-cover ring-1 ring-black/10"
           />
+          <span
+            className={`hidden sm:inline text-lg tracking-tight transition-colors ${
+              scrolled || open ? "text-foreground" : "text-white"
+            }`}
+            style={{ fontFamily: "var(--font-display)" }}
+          >
+            Arctic Daze<span className="text-accent">.</span>
+          </span>
         </a>
 
         <nav className="hidden lg:flex items-center gap-8">
@@ -262,7 +281,7 @@ function Hero() {
           transition={{ delay: 1.2, duration: 1 }}
           className="hidden xl:grid absolute right-12 top-1/2 -translate-y-1/2 grid-cols-2 gap-4 w-[380px]"
         >
-          {[collage1, sneaker, watchImg, perfume].map((src, i) => (
+          {[collage1, sneaker, watchImg, pants, puma, perfume].map((src, i) => (
             <motion.div
               key={i}
               initial={{ y: 30, opacity: 0 }}
@@ -277,7 +296,7 @@ function Hero() {
                 alt=""
                 whileHover={{ scale: 1.08 }}
                 transition={{ duration: 0.6 }}
-                className="w-full h-44 object-cover"
+                className="w-full h-36 object-cover"
               />
             </motion.div>
           ))}
@@ -763,7 +782,12 @@ function Footer() {
       <div className="container-luxe">
         <div className="grid md:grid-cols-12 gap-12 pb-14 border-b border-white/10">
           <div className="md:col-span-5">
-            <img src={logo} alt="Arctic Daze" className="h-10 w-auto brightness-0 invert" />
+            <div className="flex items-center gap-3">
+              <img src={logo} alt="Arctic Daze" className="size-12 rounded-full object-cover" />
+              <span className="text-xl tracking-tight text-white" style={{ fontFamily: "var(--font-display)" }}>
+                Arctic Daze<span className="text-accent">.</span>
+              </span>
+            </div>
             <p className="mt-6 text-white/60 max-w-sm leading-relaxed">
               Premium men's fashion imported from Malaysia. Sourced with intent, delivered with care.
             </p>
