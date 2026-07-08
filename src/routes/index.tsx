@@ -52,7 +52,7 @@ export const Route = createFileRoute("/")({
       { title: "Arctic Daze — Premium Men's Fashion Imported from Malaysia" },
       { name: "description", content: "Shop premium men's fashion, footwear, watches, wallets and grooming from trusted Malaysian brands. Order easily via Facebook or WhatsApp with Arctic Daze." },
       { property: "og:title", content: "Arctic Daze — Premium Men's Fashion Imported from Malaysia" },
-      { property: "og:description", content: "Sourced from trusted Malaysian brands. Delivered through Arctic Daze." },
+      { property: "og:description", content: "Shop premium men's fashion, footwear, watches, wallets and grooming from trusted Malaysian brands. Order easily via Facebook or WhatsApp with Arctic Daze." },
       { property: "og:url", content: "/" },
     ],
     links: [{ rel: "canonical", href: "/" }],
