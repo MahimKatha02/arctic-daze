@@ -59,6 +59,39 @@ import puma from "@/assets/glasses.jpg";
 
 import perfume from "@/assets/wallets.jpg";
 
+
+
+import NikeLogo from "@/assets/Nike.jpg";
+import AdidasLogo from "@/assets/Adidas - Logo.jpg";
+import IkeaLogo from "@/assets/ikea.jpg";
+import HMLogo from "@/assets/H&M Logo and symbol, meaning, history.jpg";
+import CharlesKeithLogo from "@/assets/Cahrles&keith.jpg";
+import SephoraLogo from "@/assets/Sephora Wishlist.jpg";
+import SheinLogo from "@/assets/shein.jpg";
+import ShopeeLogo from "@/assets/Shopee.jpg";
+import LazadaLogo from "@/assets/Lazada.jpg";
+import GuardianLogo from "@/assets/guardian.png";
+import UniqloLogo from "@/assets/UNIQLO logo.jpg";
+import WatsonsLogo from "@/assets/watsons.jpg";
+import ZaloraLogo from "@/assets/zalora.jpg";
+
+const brands = [
+  NikeLogo,
+  AdidasLogo,
+  IkeaLogo,
+  HMLogo,
+  CharlesKeithLogo,
+  SephoraLogo,
+  SheinLogo,
+  ShopeeLogo,
+  LazadaLogo,
+  GuardianLogo,
+  UniqloLogo,
+  WatsonsLogo,
+  ZaloraLogo,
+];
+
+
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
@@ -130,9 +163,8 @@ function Nav() {
       initial={{ y: -20, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.6 }}
-      className={`fixed inset-x-0 top-0 z-50 transition-all duration-500 ${
-        scrolled || open ? "bg-background/95 backdrop-blur border-b border-border" : "bg-transparent"
-      }`}
+      className={`fixed inset-x-0 top-0 z-50 transition-all duration-500 ${scrolled || open ? "bg-background/95 backdrop-blur border-b border-border" : "bg-transparent"
+        }`}
     >
       <div className="container-luxe flex items-center justify-between h-20">
         <a href="#home" className="flex items-center gap-3">
@@ -142,9 +174,8 @@ function Nav() {
             className="size-11 md:size-12 rounded-full object-cover ring-1 ring-black/10"
           />
           <span
-            className={`hidden sm:inline text-lg tracking-tight transition-colors ${
-              scrolled || open ? "text-foreground" : "text-white"
-            }`}
+            className={`hidden sm:inline text-lg tracking-tight transition-colors ${scrolled || open ? "text-foreground" : "text-white"
+              }`}
             style={{ fontFamily: "var(--font-display)" }}
           >
             Arctic Daze<span className="text-accent">.</span>
@@ -156,9 +187,8 @@ function Nav() {
             <a
               key={n.href}
               href={n.href}
-              className={`text-[13px] font-medium tracking-wide transition-colors ${
-                scrolled ? "text-foreground/80 hover:text-accent" : "text-white/85 hover:text-white"
-              }`}
+              className={`text-[13px] font-medium tracking-wide transition-colors ${scrolled ? "text-foreground/80 hover:text-accent" : "text-white/85 hover:text-white"
+                }`}
               style={{ fontFamily: "var(--font-ui)" }}
             >
               {n.label}
@@ -178,9 +208,8 @@ function Nav() {
           <button
             aria-label="Menu"
             onClick={() => setOpen((v) => !v)}
-            className={`lg:hidden inline-flex items-center justify-center size-11 rounded-full border ${
-              scrolled || open ? "border-border text-foreground" : "border-white/40 text-white"
-            }`}
+            className={`lg:hidden inline-flex items-center justify-center size-11 rounded-full border ${scrolled || open ? "border-border text-foreground" : "border-white/40 text-white"
+              }`}
           >
             <motion.span
               key={open ? "x" : "m"}
@@ -300,9 +329,8 @@ function Hero() {
               initial={{ y: 30, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               transition={{ delay: 1.3 + i * 0.15, duration: 0.8 }}
-              className={`overflow-hidden rounded-2xl ring-1 ring-white/15 shadow-2xl ${
-                i % 2 === 0 ? "translate-y-4" : "-translate-y-4"
-              }`}
+              className={`overflow-hidden rounded-2xl ring-1 ring-white/15 shadow-2xl ${i % 2 === 0 ? "translate-y-4" : "-translate-y-4"
+                }`}
             >
               <motion.img
                 src={src}
@@ -330,8 +358,8 @@ function Hero() {
 
 /* ---------------- MARQUEE (brands) ---------------- */
 const BRANDS = [
-  "Nike","Adidas","Puma","Jordan","New Balance","ASICS","Converse","Vans",
-  "H&M","UNIQLO","Zara","Levi's","Tommy Hilfiger","Calvin Klein","Fossil","Casio","Seiko","Ray-Ban","Oakley",
+  "Nike", "Adidas", "Puma", "Jordan", "New Balance", "ASICS", "Converse", "Vans",
+  "H&M", "UNIQLO", "Zara", "Levi's", "Tommy Hilfiger", "Calvin Klein", "Fossil", "Casio", "Seiko", "Ray-Ban", "Oakley",
 ];
 
 function Marquee() {
@@ -360,7 +388,7 @@ function About() {
       <div className="container-luxe grid lg:grid-cols-12 gap-14 items-center">
         <motion.div {...fadeUp} className="lg:col-span-5">
           <div className="relative">
-            <img src={collage2} alt="Editorial fashion" className="rounded-2xl w-full h-[540px] object-cover shadow-[var(--shadow-lift)]" />
+            < src={collage2} alt="Editorial fashion" className="rounded-2xl w-full h-[540px] object-cover shadow-[var(--shadow-lift)]" />
             <div className="absolute -bottom-8 -right-4 md:-right-8 bg-background border border-border rounded-2xl p-6 shadow-[var(--shadow-soft)] w-56">
               <p className="eyebrow">Since 2024</p>
               <p className="mt-3 text-3xl font-display" style={{ fontFamily: "var(--font-display)" }}>Curated with intent</p>
@@ -603,7 +631,7 @@ const STORE_GROUPS: { title: string; items: { name: string; url: string; desc: s
     title: "Grooming & Perfumes",
     items: [
       { name: "Sephora Malaysia", url: "https://www.sephora.my", desc: "Premium fragrances and grooming." },
-      { name: "Sasa Malaysia", url: "https://www.sasa.com.my", desc: "Beauty, skincare and men's essentials." },
+      { name: "IKEA", url: "https://www.ikea.com/my/en/", desc: "Modern furniture, home décor and smart living solutions." },
       { name: "Guardian Malaysia", url: "https://www.guardian.com.my", desc: "Everyday personal care and grooming." },
       { name: "Watsons Malaysia", url: "https://www.watsons.com.my", desc: "Trusted health, beauty and grooming." },
     ],
@@ -796,13 +824,13 @@ function Footer() {
         <div className="grid md:grid-cols-12 gap-12 pb-14 border-b border-white/10">
           <div className="md:col-span-5">
             <div className="flex items-center gap-3">
-              {/* <img src={\Arctic_Logo.jpg} alt="Arctic Daze" className="size-12 rounded-full object-cover" /> */}
+              {/* < src={\Arctic_Logo.jpg} alt="Arctic Daze" className="size-12 rounded-full object-cover" /> */}
 
               <img
-  src={logo}
-  alt="Arctic Daze"
-  className="size-12 rounded-full object-cover"
-/>
+                src={logo}
+                alt="Arctic Daze"
+                className="size-12 rounded-full object-cover"
+              />
               <span className="text-xl tracking-tight text-white" style={{ fontFamily: "var(--font-display)" }}>
                 Arctic Daze<span className="text-accent">.</span>
               </span>
