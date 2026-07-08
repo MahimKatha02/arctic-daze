@@ -122,12 +122,20 @@ function Nav() {
       }`}
     >
       <div className="container-luxe flex items-center justify-between h-20">
-        <a href="#home" className="flex items-center gap-2">
+        <a href="#home" className="flex items-center gap-3">
           <img
             src={logo}
             alt="Arctic Daze"
-            className={`h-9 md:h-10 w-auto transition ${scrolled || open ? "" : "brightness-0 invert"}`}
+            className="size-11 md:size-12 rounded-full object-cover ring-1 ring-black/10"
           />
+          <span
+            className={`hidden sm:inline text-lg tracking-tight transition-colors ${
+              scrolled || open ? "text-foreground" : "text-white"
+            }`}
+            style={{ fontFamily: "var(--font-display)" }}
+          >
+            Arctic Daze<span className="text-accent">.</span>
+          </span>
         </a>
 
         <nav className="hidden lg:flex items-center gap-8">
